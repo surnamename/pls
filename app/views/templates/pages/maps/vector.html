@@ -1,0 +1,115 @@
+<div data-ng-slim-scroll id="scroll-page" class="page page-vector-maps">
+  <!-- Breadcrumbs -->
+  <div class="pageheader">
+    <div class="page-bar">
+      <ul class="page-breadcrumb">
+        <li>
+          <a ui-sref="app.dashboard"><i class="fa fa-home"></i></a>
+        </li>
+        <li><p>Maps</p></li>
+        <li>
+          <p data-ng-bind="page.title" class="active"></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- World Map -->
+  <div class="row">
+    <div class="col-md-12">
+      <section class="tile" fullscreen="isFS01">
+        <div class="tile-header dvd dvd-btm">
+          <h1 class="custom-font"><strong>World </strong>Map</h1>
+          <ul class="controls">
+            <li>
+              <a href tile-control-fullscreen ng-click="isFS01 = !isFS01">
+                <i class="fa fa-expand"></i>
+              </a>
+            </li>
+            <li class="remove">
+              <a href tile-control-close>
+                <i class="fa fa-times"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="tile-body">
+          <vector-map class="ui-map" options="worldMap"></vector-map>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <section class="tile" fullscreen="isFS02">
+        <div class="tile-header dvd dvd-btm">
+          <h1 class="custom-font"><strong>USA </strong>Map</h1>
+          <ul class="controls">
+            <li>
+              <a href tile-control-fullscreen ng-click="isFS02= !isFS02">
+                <i class="fa fa-expand"></i>
+              </a>
+            </li>
+            <li class="remove">
+              <a href tile-control-close>
+                <i class="fa fa-times"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="tile-body">
+          <vector-map class="ui-map" options="UsaMap"></vector-map>
+        </div>
+      </section>
+    </div>
+
+    <!-- Europe Map -->
+    <div class="col-md-4">
+      <section class="tile" fullscreen="isFS03">
+        <div class="tile-header dvd dvd-btm">
+          <h1 class="custom-font"><strong>Europe </strong>Map</h1>
+          <ul class="controls">
+            <li>
+              <a href tile-control-fullscreen ng-click="isFS03 = !isFS03">
+                <i class="fa fa-expand"></i>
+              </a>
+            </li>
+            <li class="remove">
+              <a href tile-control-close>
+                <i class="fa fa-times"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="tile-body">
+          <vector-map class="ui-map" options="EuropeMap"></vector-map>
+        </div>
+      </section>
+    </div>
+
+    <!-- Germany Map -->
+    <div class="col-md-4">
+      <section class="tile" fullscreen="isFS04">
+        <div class="tile-header dvd dvd-btm">
+          <h1 class="custom-font"><strong>Germany </strong>Map</h1>
+          <ul class="controls">
+            <li>
+              <a href tile-control-fullscreen ng-click="isFS04 = !isFS04">
+                <i class="fa fa-expand"></i>
+              </a>
+            </li>
+            <li class="remove">
+              <a href tile-control-close>
+                <i class="fa fa-times"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="tile-body">
+          <vector-map class="ui-map" options="GermanyMap"></vector-map>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

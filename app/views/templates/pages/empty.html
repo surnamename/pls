@@ -1,0 +1,91 @@
+<div ng-slim-scroll id="scroll-content" class="page pls-page-name">
+  <!-- Breadcrumbs -->
+  <div class="pageheader">
+    <div class="page-bar">
+      <ul class="page-breadcrumb">
+        <li>
+          <a ui-sref="app.dashboard"><i class="fa fa-home"></i></a>
+        </li>
+        <li data-ng-repeat="item in breadcrumbs">
+          <a data-ng-if="item.link" ui-sref="item.link" data-ng-bind="item.text"></a>
+
+          <p data-ng-if="!item.link" data-ng-bind="item.text"></p>
+        </li>
+        <li>
+          <p data-ng-bind="page.title" class="active"></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Tile Section -->
+  <uib-accordion data-close-others="true" class="spa-accordion tile">
+    <!-- Alerts Report -->
+    <uib-accordion-group data-is-open="true" data-fullscreen="vm.isFS01" only-watched-property class="tile">
+      <uib-accordion-heading>
+        <div class="tile-header">
+          <h1 class="custom-font">
+            <span class="spa-font-bold" data-ng-bind="::page.title"></span> Report
+          </h1>
+          <ul class="controls">
+            <li class="spa-switch-panel">
+              <a data-ng-click="$event.stopPropagation()">Add New +</i></a>
+            </li>
+            <li data-ng-controller="dateRange as dateRange" class="spa-date-range">
+              <a data-ng-click="$event.stopPropagation()" date-range-picker="dateRange">
+                <span data-ng-bind="dateRange.start"></span> - <span data-ng-bind="dateRange.end"></span>
+                <i class="fa fa-angle-down"></i>
+              </a>
+            </li>
+            <li class="spa-tile-toggle">
+              <a>
+                <span class="minimize"><i class="fa fa-angle-down"></i></span>
+                <span class="expand"><i class="fa fa-angle-up spa-pulsate"></i></span>
+              </a>
+            </li>
+            <li>
+              <a data-ng-click="vm.isFS01 = !vm.isFS01; $event.stopPropagation()" data-app-full-screen-grid="alerts">
+                <i class="fa fa-expand"></i>
+                <i class="fa fa-compress"></i>
+              </a>
+            </li>
+            <li data-uib-dropdown data-dropdown-append-to-body>
+              <a data-uib-dropdown-toggle data-ng-click="$event.stopPropagation()"><i class="fa fa-cog"></i></a>
+              <ul data-uib-dropdown-menu class="pull-right with-arrow animated littleFadeInUp spa-grid-menu">
+                <li><a><i class="fa fa-refresh"></i> Refresh</a></li>
+                <li><a><i class="fa fa-filter"></i> Clear All Filters</a></li>
+                <li><a><i class="fa fa-trash-o"></i> Remove Selected</a></li>
+                <li class="divider"></li>
+                <li><a><i class="fa fa-file-pdf-o"></i> Save as PDF</a></li>
+                <li><a><i class="fa fa-file-excel-o"></i> Save as CSV</a></li>
+                <li class="divider"></li>
+                <li>
+                  <a data-ng-click="vm.compact = !vm.compact">
+                    <i class="fa" data-ng-class="{'fa-check': vm.compact}"></i> View Compact
+                  </a>
+                </li>
+                <li>
+                  <a data-ng-click="vm.compact = !vm.compact">
+                    <i class="fa" data-ng-class="{'fa-check': !vm.compact}"></i> View Detailed
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a data-ng-click="vm.pagination = !vm.pagination">
+                    <i class="fa" data-ng-class="{'fa-check': !vm.pagination}"></i> Infinity Scroll
+                  </a>
+                </li>
+                <li>
+                  <a data-ng-click="vm.pagination = !vm.pagination">
+                    <i class="fa" data-ng-class="{'fa-check': vm.pagination}"></i> Pagination
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </uib-accordion-heading>
+      <div class="tile-body spa-no-padding spa-height-300"></div>
+    </uib-accordion-group>
+  </uib-accordion>
+</div>

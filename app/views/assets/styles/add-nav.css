@@ -1,0 +1,54 @@
+
+.add-nav {
+    margin-top: -29px;
+}
+
+.add-nav .nav-heading {
+    background-color: white;
+    padding: 30px 20px;
+}
+
+.add-nav .nav-heading h1,
+.add-nav .nav-heading h2,
+.add-nav .nav-heading h3,
+.add-nav .nav-heading h4,
+.add-nav .nav-heading h5,
+.add-nav .nav-heading h6 {
+    margin: 0;
+    display: inline-block;
+}
+
+.add-nav .nav-tabs {
+    background-color: white;
+}
+
+.add-nav .nav-tabs > li:first-child {
+    margin-left: 10px;
+}
+
+.add-nav .nav-tabs > li > a {
+    color: #616f77;
+    padding: 0 8px 10px;
+    margin: 0 10px;
+}
+
+.add-nav .nav-tabs > li > a:hover {
+    color: #428bca;
+    background-color: transparent;
+}
+
+.add-nav .nav-tabs > li.active > a,
+.add-nav .nav-tabs > li.active > a:hover,
+.add-nav .nav-tabs > li.active > a:focus {
+    background-color: white;
+    color: #428bca;
+    font-weight: 700;
+}
+
+.add-nav .nav-tabs > li.active:after {
+    display: none;
+}
+
+.add-nav .tab-content .tab-pane {
+    padding: 40px 0 15px;
+}

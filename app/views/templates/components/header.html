@@ -1,0 +1,245 @@
+<header class="clearfix">
+  <!-- Branding -->
+  <div class="branding">
+    <a class="brand" ui-sref="app.dashboard">
+      <span><span class="spa-font-bold">PLS</span> PRO <span class="small">3.0</span></span>
+    </a>
+  </div>
+
+  <!-- Left-side navigation -->
+  <ul class="nav-left pull-left list-unstyled list-inline">
+    <li data-ng-hide="main.settings.sidebarNO" class="sidebar-collapse divided-right">
+      <a href data-collapse-sidebar>
+        <i class="fa fa-outdent"></i>
+      </a>
+    </li>
+    <li class="divided-right">
+      <a>
+        <i data-uib-popover="Please, press F11 on your keyboard, to enter or escape Fullscreen Mode"
+           data-popover-trigger="mouseenter" data-popover-placement="bottom" class="fa fa-expand"></i>
+      </a>
+    </li>
+    <!-- Hidden -->
+    <li class="dropdown divided-right settings hidden" data-on-toggle="toggled(open)">
+      <a href class="dropdown-toggle"><i class="fa fa-cog"></i></a>
+      <ul class="dropdown-menu with-arrow animated littleFadeInUp">
+        <li>
+          <div class="form-group ng-scope">
+            <div class="row">
+              <label class="col-xs-8 control-label">Fixed Header</label>
+
+              <div class="col-xs-4 control-label">
+                <div class="onoffswitch lightred small" data-ng-click="$event.stopPropagation()">
+                  <input ng-model="main.settings.headerFixed" type="checkbox" name="onoffswitch"
+                         class="onoffswitch-checkbox" id="fixed-header"
+                         checked="">
+                  <label class="onoffswitch-label" for="fixed-header">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="form-group ng-scope">
+            <div class="row">
+              <label class="col-xs-8 control-label">Fixed Sidebar</label>
+
+              <div class="col-xs-4 control-label">
+                <div class="onoffswitch lightred small" data-ng-click="$event.stopPropagation()">
+                  <input data-ng-model="main.settings.asideFixed" type="checkbox" name="onoffswitch" id="fixed-aside"
+                         class="onoffswitch-checkbox"
+                         checked="">
+                  <label class="onoffswitch-label" for="fixed-aside">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Right-side navigation -->
+  <ul class="nav-right pull-right list-inline">
+    <li data-uib-dropdown class="users">
+      <a data-uib-dropdown-toggle>
+        <i class="fa fa-user"></i>
+        <span class="badge bg-lightred">2</span>
+      </a>
+
+      <div data-uib-dropdown-menu class="pull-right with-arrow panel panel-default animated littleFadeInUp">
+        <div class="panel-heading">You have <strong>2</strong> requests</div>
+
+        <ul class="list-group">
+          <li class="list-group-item">
+            <a href="" class="media">
+              <span class="pull-left media-object thumb thumb-sm"></span>
+
+              <div class="media-body">
+                <span class="block">Arnold sent you a request</span>
+                <small class="text-muted">15 minutes ago</small>
+              </div>
+            </a>
+          </li>
+
+          <li class="list-group-item">
+            <a href="" class="media">
+              <span class="pull-left media-object  thumb thumb-sm"></span>
+
+              <div class="media-body">
+                <span class="block">George sent you a request</span>
+                <small class="text-muted">5 hours ago</small>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <div class="panel-footer">
+          <a href="">Show all requests <i class=" fa fa-angle-right pull-right"></i></a>
+        </div>
+      </div>
+    </li>
+
+    <li data-uib-dropdown class="messages">
+      <a data-uib-dropdown-toggle>
+        <i class="fa fa-envelope"></i>
+        <span class="badge bg-lightred">4</span>
+      </a>
+
+      <div data-uib-dropdown-menu class="pull-right with-arrow panel panel-default animated littleFadeInDown">
+        <div class="panel-heading">You have <strong>4</strong> messages</div>
+
+        <ul class="list-group">
+          <li class="list-group-item">
+            <a href="" class="media">
+              <span class="pull-left media-object thumb thumb-sm"></span>
+
+              <div class="media-body">
+                <span class="block">Imrich sent you a message</span>
+                <small class="text-muted">12 minutes ago</small>
+              </div>
+            </a>
+          </li>
+
+          <li class="list-group-item">
+            <a href="" class="media">
+              <span class="pull-left media-object thumb thumb-sm"></span>
+
+              <div class="media-body">
+                <span class="block">Peter sent you a message</span>
+                <small class="text-muted">46 minutes ago</small>
+              </div>
+            </a>
+          </li>
+
+          <li class="list-group-item">
+            <a href="" class="media">
+              <span class="pull-left media-object thumb thumb-sm"></span>
+
+              <div class="media-body">
+                <span class="block">Bill sent you a message</span>
+                <small class="text-muted">1 hour ago</small>
+              </div>
+            </a>
+          </li>
+
+          <li class="list-group-item">
+            <a href="" class="media">
+              <span class="pull-left media-object thumb thumb-sm"></span>
+
+              <div class="media-body">
+                <span class="block">Ken sent you a message</span>
+                <small class="text-muted">3 hours ago</small>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <div class="panel-footer">
+          <a href="">Show all messages <i class="fa fa-angle-right pull-right"></i></a>
+        </div>
+      </div>
+    </li>
+
+    <li data-uib-dropdown class="notifications">
+      <a data-uib-dropdown-toggle>
+        <i class="fa fa-bell"></i>
+        <span class="badge bg-lightred">3</span>
+      </a>
+
+      <div data-uib-dropdown-menu class="pull-right with-arrow panel panel-default animated littleFadeInLeft">
+        <div class="panel-heading">You have <strong>3</strong> notifications</div>
+
+        <ul class="list-group">
+          <li class="list-group-item">
+            <a href="" class="media">
+              <span class="pull-left media-object media-icon bg-danger">
+                <i class="fa fa-ban"></i>
+              </span>
+
+              <div class="media-body">
+                <span class="block">User Imrich cancelled account</span>
+                <small class="text-muted">6 minutes ago</small>
+              </div>
+            </a>
+          </li>
+
+          <li class="list-group-item">
+            <a href="" class="media">
+              <span class="pull-left media-object media-icon bg-primary">
+                <i class="fa fa-bolt"></i>
+              </span>
+
+              <div class="media-body">
+                <span class="block">New user registered</span>
+                <small class="text-muted">12 minutes ago</small>
+              </div>
+            </a>
+          </li>
+
+          <li class="list-group-item">
+            <a href="" class="media">
+              <span class="pull-left media-object media-icon bg-greensea">
+                <i class="fa fa-lock"></i>
+              </span>
+
+              <div class="media-body">
+                <span class="block">User Robert locked account</span>
+                <small class="text-muted">18 minutes ago</small>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <div class="panel-footer">
+          <a href="">Show all notifications <i class="fa fa-angle-right pull-right"></i></a>
+        </div>
+      </div>
+    </li>
+
+    <li data-uib-dropdown class="nav-profile">
+      <a data-uib-dropdown-toggle>User Name <i class="fa fa-angle-down"></i></a>
+      <ul data-uib-dropdown-menu class="pull-right animated with-arrow littleFadeInDown">
+        <li><a href><i class="fa fa-user"></i>Profile</a></li>
+        <li><a href><i class="fa fa-check"></i>Tasks</a></li>
+        <li><a href><i class="fa fa-cog"></i>Settings</a></li>
+        <li class="divider"></li>
+        <li><a href><i class="fa fa-lock"></i>Lock</a></li>
+        <li><a href><i class="fa fa-sign-out"></i>Logout</a></li>
+      </ul>
+    </li>
+
+    <li class="toggle-right-sidebar">
+      <a data-ng-click="main.settings.rightbarShow = !main.settings.rightbarShow" href>
+        <i class="fa fa-cogs"></i>
+      </a>
+    </li>
+  </ul>
+</header>

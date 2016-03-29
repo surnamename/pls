@@ -1,0 +1,188 @@
+<div data-ng-slim-scroll data-position="left" data-size="5px" id="sidebar-wrap">
+  <ul nav-collapse class="navigation">
+    <li ui-sref-active="active">
+      <a ui-sref="app.dashboard">
+        <i class="fa fa-bar-chart"></i>
+        <span>Dashboard</span>
+      </a>
+    </li>
+    <li ui-sref-active="active">
+      <a ui-sref="app.shipmentEntry">
+        <i class="fa fa-ship"></i>
+        <span>Shipment Entry</span>
+      </a>
+    </li>
+    <li ui-sref-active="active">
+      <a ui-sref="app.manualBOL">
+        <i class="fa fa-road"></i>
+        <span>Manual BOL</span>
+      </a>
+    </li>
+    <li ui-sref-active="active" data-ng-class="{'open': $state.includes('app.quotes')}">
+      <a data-app-resize ui-sref="app.quotes">
+        <i class="fa fa-cubes"></i>
+        <span>Quotes</span>
+      </a>
+      <ul>
+        <li ui-sref-active="active"><a ui-sref="app.quotes.new">New Quote</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.quotes.saved">Saved Quotes</a></li>
+      </ul>
+    </li>
+    <li ui-sref-active="active">
+      <a ui-sref="app.salesOrder">
+        <i class="fa fa-cart-arrow-down"></i>
+        <span>Sales Order</span>
+      </a>
+    </li>
+    <li ui-sref-active="active" ng-class="{'open': $state.includes('app.vendorBills')}">
+      <a data-app-resize ui-sref="app.vendorBills">
+        <i class="fa fa-clipboard"></i>
+        <span>Vendor Bills</span>
+      </a>
+      <ul>
+        <li ui-sref-active="active"><a ui-sref="app.vendorBills.unmatched">Unmatched Vendor Bills</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.vendorBills.archived">Archived Vendor Bills</a></li>
+      </ul>
+    </li>
+    <li ui-sref-active="active" ng-class="{'open': $state.includes('app.operationalBoard')}">
+      <a data-app-resize ui-sref="app.operationalBoard">
+        <i class="fa fa-hourglass-o"></i>
+        <span>Operational Board</span>
+      </a>
+      <ul>
+        <li ui-sref-active="active"><a ui-sref="app.operationalBoard.alerts">Alerts<span
+            class="badge bg-lightred">768</span></a></li>
+        <li ui-sref-active="active"><a ui-sref="app.operationalBoard.booked">Booked</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.operationalBoard.activeShipments">Active Shipments</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.operationalBoard.waitingForVendorBill">Waiting For Vendor Bill</a>
+        </li>
+        <li ui-sref-active="active"><a ui-sref="app.operationalBoard.openShipments">Open Shipments</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.operationalBoard.allShipments">All Shipments</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.operationalBoard.manualBOL">Manual BOL</a></li>
+      </ul>
+    </li>
+    <li ui-sref-active="active" ng-class="{'open': $state.includes('app.financialBoard')}">
+      <a data-app-resize ui-sref="app.financialBoard">
+        <i class="fa fa-balance-scale"></i>
+        <span>Financial Board</span>
+      </a>
+      <ul>
+        <li ui-sref-active="active"><a ui-sref="app.financialBoard.transactionalInvoices">Transactional Invoices</a>
+        </li>
+        <li ui-sref-active="active"><a ui-sref="app.financialBoard.consolidatedInvoices">Consolidated Invoices</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.financialBoard.invoiceAudit">Invoice Audit</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.financialBoard.priceAudit">Price Audit</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.financialBoard.invoiceErrors">Invoice Errors<span
+            class="badge bg-lightred">23</span></a></li>
+        <li ui-sref-active="active"><a ui-sref="app.financialBoard.invoiceHistory">Invoice History</a></li>
+      </ul>
+    </li>
+    <li ui-sref-active="active" ng-class="{'open': $state.includes('app.pricing')}">
+      <a data-app-resize ui-sref="app.pricing">
+        <i class="fa fa-money"></i>
+        <span>Pricing</span>
+      </a>
+      <ul>
+        <li ui-sref-active="active"><a ui-sref="app.pricing.tariffs">Tariffs</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.pricing.fuel">Fuel</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.pricing.customer">Customer</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.pricing.scacCodes">SCAC Codes</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.pricing.accType">Acc Type</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.pricing.analysis">Analysis</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.pricing.manualBol">Manual BOL</a></li>
+      </ul>
+    </li>
+    <li ui-sref-active="active" ng-class="{'open': $state.includes('app.customers')}">
+      <a data-app-resize ui-sref="app.customers">
+        <i class="fa fa-users"></i>
+        <span>Customers</span>
+      </a>
+      <ul>
+        <li ui-sref-active="active"><a ui-sref="app.customers.active">Active</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.customers.hold">Hold</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.customers.inactive">Inactive</a></li>
+      </ul>
+    </li>
+    <li ui-sref-active="active" data-ng-class="{'open': $state.includes('app.products')}">
+      <a ui-sref="app.products">
+        <i class="fa fa-gift"></i>
+        <span>Products</span>
+      </a>
+    </li>
+    <li ui-sref-active="active" data-ng-class="{'open': $state.includes('app.addressBook')}">
+      <a ui-sref="app.addressBook">
+        <i class="fa fa-map-signs"></i>
+        <span>Address Book</span>
+      </a>
+    </li>
+    <li ui-sref-active="active" data-ng-class="{'open': $state.includes('app.reports')}">
+      <a data-app-resize ui-sref="app.reports">
+        <i class="fa fa-print"></i>
+        <span>Reports</span>
+      </a>
+      <ul>
+        <li ui-sref-active="active"><a ui-sref="app.reports.unbilled">Unbilled</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.reports.activity">Activity</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.reports.savings">Savings</a></li>
+        <li ui-sref-active="active"><a ui-sref="app.reports.lostSavings">Lost Savings Opportunity</a></li>
+      </ul>
+    </li>
+    <li ui-sref-active="active">
+      <a ui-sref="app.userManagement">
+        <i class="fa fa-user-plus"></i>
+        <span>User Management</span>
+      </a>
+    </li>
+    <li class="divider"></li>
+    <li ui-sref-active="active" ng-class="{'open':$state.includes('app.maps')}" hidden>
+      <a ui-sref="app.maps">
+        <i class="fa fa-map-marker"></i>
+        <span>Maps</span>
+      </a>
+      <ul>
+        <li ui-sref-active="active"><a ui-sref="app.maps.vector">Vector Maps</a></li>
+      </ul>
+    </li>
+    <li>
+      <a data-app-resize href>
+        <i class="fa fa-list"></i>
+        <span>Menu Levels</span></a>
+      <ul>
+        <li>
+          <a data-app-resize href>Menu Level 1.1</a>
+          <ul>
+            <li><a data-app-resize href>Menu Level 2.1</a></li>
+            <li><a data-app-resize href>Menu Level 2.2</a></li>
+            <li>
+              <a href="">Menu Level 2.3</a>
+              <ul>
+                <li><a data-app-resize href>Menu Level 3.1</a></li>
+                <li><a data-app-resize href>Menu Level 3.2</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a data-app-resize href>Menu Level 1.2</a>
+          <ul>
+            <li>
+              <a data-app-resize href>Menu Level 2.1</a>
+              <ul>
+                <li><a data-app-resize href>Menu Level 3.1</a></li>
+                <li>
+                  <a data-app-resize href>Menu Level 3.2</a>
+                  <ul>
+                    <li><a data-app-resize href>Menu Level 4.1</a></li>
+                    <li><a data-app-resize href>Menu Level 4.2</a></li>
+                  </ul>
+                </li>
+                <li><a data-app-resize href>Menu Level 3.3</a></li>
+              </ul>
+            </li>
+            <li><a data-app-resize href>Menu Level 2.2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

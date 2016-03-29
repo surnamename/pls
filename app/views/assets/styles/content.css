@@ -1,0 +1,114 @@
+#content {
+    padding-top: 45px;
+}
+
+#content,
+#content > [ui-view] {
+    width: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: -blackberry-touch;
+    -webkit-transition: right 0.25s cubic-bezier(0.6, 0.04, 0.98, 0.335), padding-right 0.25s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    -moz-transition: right 0.25s cubic-bezier(0.6, 0.04, 0.98, 0.335), padding-right 0.25s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    transition: right 0.25s cubic-bezier(0.6, 0.04, 0.98, 0.335), padding-right 0.25s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+
+#content .page,
+#content > [ui-view] {
+    opacity: 1;
+}
+
+#content.ng-enter .page,
+#content.ng-leave .page,
+#content > [ui-view].ng-enter .page,
+#content > [ui-view].ng-leave .page {
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+#content.ng-enter .page,
+#content > [ui-view].ng-enter .page {
+    opacity: 1;
+}
+
+#content.ng-enter-active .page,
+#content > [ui-view].ng-enter-active .page {
+    opacity: 1;
+}
+
+#content.ng-leave .page,
+#content > [ui-view].ng-leave .page {
+    opacity: 0;
+}
+
+#content.ng-leave-active .page,
+#content > [ui-view].ng-leave-active .page {
+    opacity: 0;
+}
+/*
+#content.ng-enter .page {
+    -webkit-animation: littleFadeInUp 0.5s ease;
+    -moz-animation: littleFadeInUp 0.5s ease;
+    animation: littleFadeInUp 0.5s ease;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#content.ng-leave .page {
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+#content > [ui-view].ng-enter,
+#content > [ui-view].ng-leave {
+    position: absolute;
+    left: 0;
+    right: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#content > [ui-view].ng-enter {
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transform: scale3d(0.5, 0.5, 0.5);
+    -moz-transform: scale3d(0.5, 0.5, 0.5);
+    -ms-transform: scale3d(0.5, 0.5, 0.5);
+    -o-transform: scale3d(0.5, 0.5, 0.5);
+    transform: scale3d(0.5, 0.5, 0.5);
+}
+
+#content > [ui-view].ng-enter-active {
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    -moz-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    -o-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+#content > [ui-view].ng-leave {
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+#content > [ui-view].ng-leave-active {
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transform: translate3d(100px, 100px, 0);
+    -moz-transform: translate3d(100px, 100px, 0);
+    -ms-transform: translate3d(100px, 100px, 0);
+    -o-transform: translate3d(100px, 100px, 0);
+    transform: translate3d(100px, 100px, 0);
+}*/

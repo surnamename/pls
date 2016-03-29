@@ -1,0 +1,30 @@
+.panel {
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+}
+
+.panel .panel-heading {
+    border-radius: 0;
+}
+
+.panel .panel-heading .panel-title .accordion-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.panel .panel-heading .panel-title .accordion-toggle:hover {
+    text-decoration: none;
+}
+
+.panel .panel-heading .panel-title .accordion-toggle:hover span.text-muted {
+    padding-left: 0;
+}
+
+.panel-group .panel {
+    border-radius: 0;
+}

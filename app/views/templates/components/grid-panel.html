@@ -1,0 +1,127 @@
+<uib-accordion-heading>
+  <div class="tile-header">
+    <h1 class="custom-font">
+      <span class="spa-font-bold">
+        <span data-ng-show="gridId === 'alerts'">Alerts</span>
+        <span data-ng-show="gridId === 'booked'">Booked</span>
+        <span data-ng-show="gridId === 'undelivered'">Active Shipments</span>
+        <span data-ng-show="gridId === 'unbilled'">Waiting For Vendor Bill</span>
+        <span data-ng-show="gridId === 'open'">Open Shipments</span>
+        <span data-ng-show="gridId === 'all'">All Shipments</span>
+        <span data-ng-show="gridId === 'allManualBol'">Manual BOL</span>
+      </span>
+      <span data-ng-if="vm.accordion[gridId].type === 'grid'">- Report
+        <span data-ng-show="gridId === 'alerts'" class="badge bg-lightred">789</span>
+      </span>
+      <span data-ng-if="vm.accordion[gridId].type === 'form'">
+        <span data-ng-if="vm.accordion[gridId].form === 'new'">- Add New</span>
+        <span data-ng-if="vm.accordion[gridId].form === 'copy'">- Add New (copy)</span>
+        <span data-ng-if="vm.accordion[gridId].form === 'edit'">- Edit Record</span>
+      </span>
+    </h1>
+    <ul class="controls">
+      <li data-ng-if="vm.accordion[gridId].type === 'grid'" class="spa-switch-panel">
+        <a data-ng-click="vm.switchTo('form', gridId, 'new'); $event.stopPropagation()" data-app-full-screen-grid>Add New +</a>
+      </li>
+      <li data-ng-if="vm.accordion[gridId].type === 'form'" class="spa-switch-panel">
+        <a data-ng-click="vm.switchTo('grid', gridId); $event.stopPropagation()" data-app-full-screen-grid="{{gridId}}">
+          <i class="fa fa-arrow-left"></i> Back to Report
+        </a>
+      </li>
+      <li data-ng-controller="dateRange as dateRange" class="spa-date-range">
+        <a data-ng-click="$event.stopPropagation()" date-range-picker="dateRange">
+          <span data-ng-bind="dateRange.start"></span> - <span data-ng-bind="dateRange.end"></span>
+          <i class="fa fa-angle-down"></i>
+        </a>
+      </li>
+      <li class="spa-tile-toggle">
+        <a>
+          <span class="minimize"><i class="fa fa-angle-down"></i></span>
+          <span class="expand"><i class="fa fa-angle-up spa-pulsate"></i></span>
+        </a>
+      </li>
+      <li>
+        <a data-ng-click="vm.isFS[gridId] = !vm.isFS[gridId]; $event.stopPropagation()" data-app-full-screen-grid="{{gridId}}">
+          <i class="fa fa-expand"></i>
+          <i class="fa fa-compress"></i>
+        </a>
+      </li>
+      <li data-uib-dropdown data-dropdown-append-to-body>
+        <a data-uib-dropdown-toggle data-ng-click="$event.stopPropagation()"><i class="fa fa-cog"></i></a>
+        <ul data-uib-dropdown-menu class="pull-right with-arrow animated littleFadeInUp spa-grid-menu">
+          <li>
+            <a data-ng-click="vm.refreshModel(gridId, true)"><i class="fa fa-refresh"></i> Refresh Data</a>
+          </li>
+          <li>
+            <a data-ng-click="vm[gridId].gridApi.core.clearAllFilters()">
+              <i class="fa fa-filter"></i> Clear All Filters
+            </a>
+          </li>
+          <li><a><i class="fa fa-trash-o"></i> Remove Selected</a></li>
+          <li class="divider"></li>
+          <li><a><i class="fa fa-file-pdf-o"></i> Save as PDF</a></li>
+          <li><a><i class="fa fa-file-excel-o"></i> Save as CSV</a></li>
+          <li class="divider"></li>
+          <li>
+            <a data-ng-click="vm.compact = !vm.compact">
+              <i class="fa" data-ng-class="{'fa-check': vm.compact}"></i> View Compact
+            </a>
+          </li>
+          <li>
+            <a data-ng-click="vm.compact = !vm.compact">
+              <i class="fa" data-ng-class="{'fa-check': !vm.compact}"></i> View Detailed
+            </a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a data-ng-click="vm.pagination = !vm.pagination">
+              <i class="fa" data-ng-class="{'fa-check': !vm.pagination}"></i> Infinity Scroll
+            </a>
+          </li>
+          <li>
+            <a data-ng-click="vm.pagination = !vm.pagination">
+              <i class="fa" data-ng-class="{'fa-check': vm.pagination}"></i> Pagination
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</uib-accordion-heading>
+
+<div data-ng-if="vm.accordion[gridId].status" class="tile-body spa-no-padding">
+  <div data-ng-show="vm.accordion[gridId].type === 'grid'">
+    <div ui-grid="vm[gridId]" ui-grid-selection ui-grid-resize-columns ui-grid-move-columns id="{{gridId}}" class="grid"></div>
+  </div>
+</div>
+<div data-ng-if="vm.accordion[gridId].type === 'form'" class="tile-body">
+  <form class="form-horizontal">
+    <div data-ng-if="vm.accordion[gridId].form !== 'new'" data-ng-repeat="(key, value) in ::vm[gridId].editRow.entity track by $index"
+         class="form-group">
+      <label for="{{::key}}" data-ng-bind="::key + ':'" class="col-sm-2 control-label"></label>
+
+      <div class="col-sm-10">
+        <input id="{{::key}}" data-ng-model="value" type="email" class="form-control" placeholder="Enter value">
+      </div>
+    </div>
+
+    <div data-ng-if="vm.accordion[gridId].form === 'new'" class="form-group" data-ng-repeat="(key, value) in ::vm[gridId].data[0] track by $index">
+      <label for="{{::key}}" data-ng-bind="::key + ':'" class="col-sm-2 control-label"></label>
+
+      <div class="col-sm-10">
+        <input id="{{::key}}" data-ng-model="newValue" type="email" class="form-control" placeholder="Enter value">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button data-ng-click="vm.switchTo('grid', gridId); $event.stopPropagation()" data-app-full-screen-grid="{{gridId}}" type="submit"
+                class="btn btn-success">Save
+        </button>
+        <button data-ng-click="vm.switchTo('grid', gridId); $event.stopPropagation()" data-app-full-screen-grid="{{gridId}}"
+                class="btn btn-danger pull-right">Cancel
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

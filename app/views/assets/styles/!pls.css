@@ -1,0 +1,255 @@
+.spa-height-300 {
+    height: 300px;
+}
+
+.spa-no-padding {
+    padding: 0 !important;
+}
+
+.spa-padding-15 {
+    padding: 15px;
+}
+
+.spa-font-bold {
+    font-weight: bold;
+}
+
+.spa-switch-panel a {
+    color: #337ab7 !important;
+}
+
+.spa-switch-panel a:hover {
+    text-decoration: underline !important;
+}
+
+.spa-switch-panel .fa-arrow-left {
+    color: green;
+}
+
+
+
+
+
+.spa-accordion .panel.isInFullScreen .spa-date-range,
+.spa-accordion .panel.isInFullScreen .spa-tile-toggle,
+.spa-accordion .panel.isInFullScreen .fa-expand,
+.spa-accordion .panel.isInFullScreen .dropdown,
+.spa-accordion .panel:not(.isInFullScreen) .fa-compress,
+.spa-accordion .panel.panel-open .expand,
+.spa-accordion .panel:not(.panel-open) .minimize {
+    display: none !important;
+}
+
+.spa-accordion .panel.isInFullScreen {
+    margin-bottom: 0;
+}
+
+.spa-accordion .tile-header .controls > li {
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.spa-accordion .custom-font {
+    color: #616f77;
+}
+
+.spa-accordion .custom-font .badge {
+    position: absolute;
+    top: 5px;
+    left: 127px;
+}
+
+.spa-accordion .panel-heading {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.spa-accordion .panel-heading,
+.spa-accordion .panel-body {
+    padding: 0;
+}
+
+.spa-pulsate {
+    border: 3px solid #999;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    height: 21px;
+    width: 21px;
+    -webkit-animation: pulsate 1s ease-out;
+    -moz-animation: pulsate 1s ease-out;
+    animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    opacity: 0.0
+}
+
+
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.0, 1.0); opacity: 0.0;}
+}
+
+@-moz-keyframes pulsate {
+    0% {-moz-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-moz-transform: scale(1.0, 1.0); opacity: 0.0;}
+}
+
+@keyframes pulsate {
+    0% {transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {transform: scale(1.0, 1.0); opacity: 0.0;}
+}
+
+.spa-accordion .custom-font a {
+    color: #616f77;
+}
+
+.spa-accordion .ui-grid {
+    border: none;
+    height: 500px;
+}
+
+.spa-grid-menu {
+    margin-left: -118px;
+}
+
+.spa-grid-menu i {
+    width: 15px;
+}
+
+.spa-grid-menu .fa-check {
+    color: green;
+}
+
+
+
+
+
+.page-breadcrumb p {
+    margin: 0;
+    padding: 0 10px;
+    display: inline-block;
+    color: #95a2a9;
+}
+
+.page-breadcrumb p.active {
+    color: #333;
+    font-weight: bold;
+}
+
+.page-toolbar .btn.active {
+    box-shadow: none;
+}
+
+.dropdown-toggle,
+.dropdown-menu a {
+    cursor: pointer;
+}
+
+#header .popover {
+    width: 225px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.5);
+}
+
+#header .popover-content {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+.ui-grid-top-panel {
+    background: #E2ECF4;
+}
+
+.ui-grid-row:hover .ui-grid-cell {
+    background-color: #ddd;
+}
+
+.ui-grid-cell-contents {
+    text-align: center;
+    white-space: normal;
+    height: 50px;
+}
+
+.ui-grid-header-cell-label {
+    display: inline-block;
+    height: inherit;
+    font-size: 15px;
+    text-overflow: ellipsis;
+}
+
+.ui-grid-filter-container {
+    padding: 2px;
+}
+
+.ui-grid-filter-input,
+input[type="text"].ui-grid-filter-input {
+    border-radius: 4px;
+    line-height: 30px;
+    height: 30px;
+    font-size: 16px;
+}
+
+.ui-grid-column-menu-button {
+    display: none;
+}
+
+.ui-grid-sort-priority-number {
+    display: none;
+}
+
+.ui-grid-icon-up-dir,
+.ui-grid-icon-down-dir,
+.ui-grid-icon-blank {
+    position: absolute;
+    top: 5px;
+    right: -5px;
+}
+
+.ui-grid i {
+    width: 25px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.ui-grid .fa-copy:hover {
+    color: darkgreen;
+}
+
+.ui-grid .fa-edit:hover {
+    color: darkblue;
+}
+
+.ui-grid .fa-times-circle:hover {
+    color: darkred;
+}
+
+.ui-grid-grid-footer {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.ui-grid-grid-footer span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.ui-grid i:not(.fa) {
+    width: 20px;
+    font-size: 15px;
+}
+
+.ui-grid-filter-container .ui-grid-filter-button [class^="ui-grid-icon"] {
+    right: 0;
+    opacity: .5;
+    margin-top: -25px;
+}

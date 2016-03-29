@@ -1,0 +1,313 @@
+
+.form-control {
+    color: #616f77;
+    outline: 0;
+    vertical-align: top;
+    background-color: #fff;
+    filter: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 2px;
+    border: 1px solid #dbe0e2;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.form-control:not(select) {
+    -webkit-appearance: none !important;
+}
+
+.form-control::-webkit-input-placeholder {
+    -webkit-transition: color 0.2s linear;
+    -moz-transition: color 0.2s linear;
+    transition: color 0.2s linear;
+    color: #bfc7cb;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.form-control::-moz-placeholder {
+    -webkit-transition: color 0.2s linear;
+    -moz-transition: color 0.2s linear;
+    transition: color 0.2s linear;
+    color: #bfc7cb;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.form-control:-moz-placeholder {
+    -webkit-transition: color 0.2s linear;
+    -moz-transition: color 0.2s linear;
+    transition: color 0.2s linear;
+    color: #bfc7cb;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.form-control:-ms-input-placeholder {
+    -webkit-transition: color 0.2s linear;
+    -moz-transition: color 0.2s linear;
+    transition: color 0.2s linear;
+    color: #bfc7cb;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.form-control.input-lg::-webkit-input-placeholder {
+    font-size: 18px;
+}
+
+.form-control.input-lg::-moz-placeholder {
+    font-size: 18px;
+}
+
+.form-control.input-lg:-moz-placeholder {
+    font-size: 18px;
+}
+
+.form-control.input-lg:-ms-input-placeholder {
+    font-size: 18px;
+}
+
+.form-control.input-sm::-webkit-input-placeholder {
+    line-height: 18px;
+}
+
+.form-control.input-sm::-moz-placeholder {
+    line-height: 18px;
+}
+
+.form-control.input-sm:-moz-placeholder {
+    line-height: 18px;
+}
+
+.form-control.input-sm:-ms-input-placeholder {
+    line-height: 18px;
+}
+
+.form-control:hover:not(:disabled) {
+    border-color: #b1bac0;
+}
+
+.form-control:focus,
+.form-control:focus:hover {
+    outline: none;
+    border: 1px solid #22beef;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-control.underline-input {
+    background: none;
+    border: 0 #dbe0e2;
+    border-bottom: 1px solid;
+    border-radius: 0;
+    -webkit-appearance: none !important;
+    vertical-align: middle;
+    padding-left: 0;
+}
+
+.form-control.underline-input:focus:hover {
+    border: 0;
+    border-bottom: 1px solid #22beef;
+}
+
+.form-control.underline-input:focus {
+    border-color: #22beef;
+}
+
+.form-control.rounded {
+    border-radius: 600px;
+}
+
+.form-control.input-unstyled {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.form-control.input-unstyled::-webkit-input-placeholder {
+    font-size: 16px;
+}
+
+.form-control.input-unstyled::-moz-placeholder {
+    font-size: 16px;
+}
+
+.form-control.input-unstyled:-moz-placeholder {
+    font-size: 16px;
+}
+
+.form-control.input-unstyled:-ms-input-placeholder {
+    font-size: 16px;
+}
+
+.form-control.input-unstyled:focus,
+.form-control.input-unstyled:focus:hover {
+    border: 0;
+}
+
+.form-group.legend h1,
+.form-group.legend h2,
+.form-group.legend h3,
+.form-group.legend h4,
+.form-group.legend h5,
+.form-group.legend h6 {
+    color: #428bca;
+    margin-bottom: 3px;
+}
+
+.form-group.legend p {
+    font-size: 12px;
+    color: #95a2a9;
+    border-bottom: 1px dotted #cacaca;
+    padding-bottom: 5px;
+}
+
+label {
+    font-weight: 400;
+}
+
+.input-group-addon {
+    border-radius: 2px;
+}
+
+.input-group-addon input[type="radio"],
+.input-group-addon input[type="checkbox"] {
+    margin-top: 3px;
+}
+
+.input-group .btn {
+    border-radius: 2px;
+}
+
+.form-validation .form-control.has-focus + .help-block {
+    display: none;
+}
+
+.form-validation .form-control.has-visited:not(.has-focus) + .help-block {
+    display: block;
+}
+
+.form-validation .form-control.ng-dirty.ng-invalid,
+.form-validation .form-control.ng-dirty.ng-invalid[type="checkbox"] + i {
+    border-color: #ff7b76;
+}
+
+.form-validation .form-control.ng-dirty.ng-invalid + .help-block,
+.form-validation .form-control.ng-dirty.ng-invalid[type="checkbox"] + i + .help-block {
+    color: #ff635c;
+}
+
+.form-validation .form-control.ng-dirty.ng-valid {
+    border-color: #b2e600;
+}
+
+.form-validation .form-control.ng-dirty.ng-valid + .help-block {
+    color: #aadc00;
+}
+
+.has-error .form-control,
+.has-error .form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #ff7b76;
+}
+
+.has-error .form-control.has-focus,
+.has-error .form-control:focus.has-focus {
+    border-color: #22beef;
+}
+
+.has-error .form-control.has-visited:not(.has-focus),
+.has-error .form-control:focus.has-visited:not(.has-focus) {
+    border-color: #ff7b76;
+}
+
+.has-error .control-label,
+.has-error .help-block {
+    color: #ff635c;
+}
+
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline {
+    color: #616f77;
+}
+
+.has-error .checkbox-custom > i,
+.has-error .checkbox-custom:hover > i {
+    border-color: #ff7b76;
+}
+
+.has-success .form-control,
+.has-success .form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #b2e600;
+}
+
+.has-success .form-control.has-focus,
+.has-success .form-control:focus.has-focus {
+    border-color: #22beef;
+}
+
+.has-success .form-control.has-visited:not(.has-focus),
+.has-success .form-control:focus.has-visited:not(.has-focus) {
+    border-color: #b2e600;
+}
+
+.has-success .control-label,
+.has-success .help-block {
+    color: #aadc00;
+}
+
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline {
+    color: #616f77;
+}
+
+.has-success .checkbox-custom > i {
+    border-color: #b2e600;
+}
+
+.has-warning .form-control,
+.has-warning .form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #ffcd33;
+}
+
+.has-warning .form-control.has-focus,
+.has-warning .form-control:focus.has-focus {
+    border-color: #22beef;
+}
+
+.has-warning .form-control.has-visited:not(.has-focus),
+.has-warning .form-control:focus.has-visited:not(.has-focus) {
+    border-color: #ffcd33;
+}
+
+.has-warning .control-label,
+.has-warning .help-block {
+    color: #ffc71a;
+}
+
+.has-warning .radio,
+.has-warning .checkbox,
+.has-warning .radio-inline,
+.has-warning .checkbox-inline {
+    color: #616f77;
+}
+
+.has-warning .checkbox-custom > i {
+    border-color: #ffcd33;
+}

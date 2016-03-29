@@ -1,0 +1,57 @@
+<uib-tabset justified="true">
+  <uib-tab id="users">
+    <tab-heading><i class="fa fa-users"></i></tab-heading>
+    <h6><strong>Active</strong> Customers</h6>
+  </uib-tab>
+
+  <uib-tab>
+    <tab-heading><i class="fa fa-clock-o"></i></tab-heading>
+    <h6><strong>Shipment</strong> History</h6>
+  </uib-tab>
+
+  <uib-tab>
+    <tab-heading><i class="fa fa-heart"></i></tab-heading>
+    <h6><strong>Favourite</strong> Clients</h6>
+  </uib-tab>
+
+  <uib-tab>
+    <tab-heading>
+      <i class="fa fa-cog"></i>
+    </tab-heading>
+    <h6><strong>App</strong> Configs</h6>
+
+    <ul class="settings">
+      <li class="hidden-xs">
+        <div class="form-group">
+          <label class="col-xs-8 control-label">Boxed Layout</label>
+
+          <div class="col-xs-4 control-label">
+            <div class="onoffswitch greensea">
+              <input data-ng-model="main.settings.boxedLayout" id="boxed-layout" type="checkbox" name="onoffswitch" class="onoffswitch-checkbox">
+              <label data-ng-click="rightBar.switch()" class="onoffswitch-label" for="boxed-layout">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="form-group">
+          <label class="col-xs-8 control-label">Hide Sidebar</label>
+
+          <div class="col-xs-4 control-label">
+            <div class="onoffswitch greensea">
+              <input data-ng-model="main.settings.sidebarNO" id="mobile-sidebar" type="checkbox" name="onoffswitch" class="onoffswitch-checkbox">
+              <label data-ng-click="rightBar.switch()" class="onoffswitch-label" for="mobile-sidebar">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </uib-tab>
+</uib-tabset>

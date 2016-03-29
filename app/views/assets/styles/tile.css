@@ -1,0 +1,414 @@
+.tile {
+    position: relative;
+    margin-bottom: 20px;
+    color: #616f77;
+    background-color: white;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transition: opacity 0.25s ease-out;
+    -moz-transition: opacity 0.25s ease-out;
+    transition: opacity 0.25s ease-out;
+}
+
+.tile.collapsed .controls .minimize {
+    display: none;
+}
+
+.tile.collapsed .controls .expand {
+    display: inline !important;
+}
+
+.tile.refreshing {
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+    cursor: not-allowed;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.tile.refreshing a {
+    pointer-events: none;
+    cursor: default;
+}
+
+.tile.isInFullScreen {
+    width: 100%;
+    height: 100%;
+}
+
+.tile.isInFullScreen .controls .remove {
+    display: none;
+}
+
+.tile.isInFullScreen .controls > li:first-child {
+    margin-right: 0 !important;
+}
+
+.tile .tile-header,
+.tile .tile-widget,
+.tile .tile-body,
+.tile .tile-footer {
+    position: relative;
+    padding: 15px;
+}
+
+.tile .dvd {
+    border: 0 solid  rgba(0, 0, 0, 0.1);
+}
+
+.tile .dvd.dvd-white {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.tile .dvd.dvd-btm {
+    border-bottom-width: 1px;
+}
+
+.tile .dvd.dvd-top {
+    border-top-width: 1px;
+}
+
+.tile.tile-simple .tile-header .controls > li {
+    background-color: transparent !important;
+}
+
+.tile.tile-simple .tile-header .controls > li > a {
+    line-height: 28px;
+    min-width: 28px;
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+.tile .tile-header {
+    padding: 8px 15px;
+}
+
+.tile .tile-header h1,
+.tile .tile-header h2,
+.tile .tile-header h3,
+.tile .tile-header h4 {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.tile .tile-header h2 {
+    font-size: 18px;
+}
+
+.tile .tile-header h3 {
+    font-size: 16px;
+}
+
+.tile .tile-header h4 {
+    font-size: 14px;
+}
+
+.tile .tile-header .controls {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.tile .tile-header .controls > li {
+    display: inline-block;
+    height: 100%;
+    float: left;
+}
+
+.tile .tile-header .controls > li > a {
+    display: block;
+    height: 100%;
+    line-height: 43px;
+    min-width: 41px;
+    padding: 0 10px;
+    text-align: center;
+    color: #95a2a9;
+}
+
+.tile .tile-header .controls > li > a:hover {
+    color: #616f77;
+    text-decoration: none;
+}
+
+.tile .tile-header.dvd .controls {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.tile .tile-header.dvd .controls > li {
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tile .tile-header.dvd.dvd-white .controls > li {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tile .tile-header .note {
+    display: inline-block;
+    padding: 2px 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #95a2a9;
+    font-family: "Dosis", "Arial", sans-serif;
+    font-size: 12px;
+    margin-left: 5px;
+    position: relative;
+    top: -2px;
+    margin-top: 5px;
+}
+
+.tile .tile-header .btn {
+    padding: 2px 5px;
+    margin-right: -24px;
+}
+
+.tile .tile-nav {
+    margin-bottom: 15px;
+}
+
+.tile .tile-nav > li {
+    display: inline-block;
+}
+
+.tile .tile-nav > li > a {
+    padding: 6px 12px;
+}
+
+.tile[class*='bg-']:not(.bg-default) .dvd,
+.tile[class*='bg-']:not(.bg-default).dvd,
+.tile-header[class*='bg-']:not(.bg-default) .dvd,
+.tile-header[class*='bg-']:not(.bg-default).dvd,
+.tile-widget[class*='bg-']:not(.bg-default) .dvd,
+.tile-widget[class*='bg-']:not(.bg-default).dvd,
+.tile-body[class*='bg-']:not(.bg-default) .dvd,
+.tile-body[class*='bg-']:not(.bg-default).dvd,
+.tile-footer[class*='bg-']:not(.bg-default) .dvd,
+.tile-footer[class*='bg-']:not(.bg-default).dvd {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.tile[class*='bg-']:not(.bg-default) .controls > li,
+.tile-header[class*='bg-']:not(.bg-default) .controls > li,
+.tile-widget[class*='bg-']:not(.bg-default) .controls > li,
+.tile-body[class*='bg-']:not(.bg-default) .controls > li,
+.tile-footer[class*='bg-']:not(.bg-default) .controls > li {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tile[class*='bg-']:not(.bg-default) .controls > li:last-child,
+.tile-header[class*='bg-']:not(.bg-default) .controls > li:last-child,
+.tile-widget[class*='bg-']:not(.bg-default) .controls > li:last-child,
+.tile-body[class*='bg-']:not(.bg-default) .controls > li:last-child,
+.tile-footer[class*='bg-']:not(.bg-default) .controls > li:last-child {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 0;
+}
+
+.tile[class*='bg-']:not(.bg-default) .controls > li:nth-last-child(2),
+.tile-header[class*='bg-']:not(.bg-default) .controls > li:nth-last-child(2),
+.tile-widget[class*='bg-']:not(.bg-default) .controls > li:nth-last-child(2),
+.tile-body[class*='bg-']:not(.bg-default) .controls > li:nth-last-child(2),
+.tile-footer[class*='bg-']:not(.bg-default) .controls > li:nth-last-child(2) {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 0;
+}
+
+.tile[class*='bg-']:not(.bg-default) .legend table,
+.tile-header[class*='bg-']:not(.bg-default) .legend table,
+.tile-widget[class*='bg-']:not(.bg-default) .legend table,
+.tile-body[class*='bg-']:not(.bg-default) .legend table,
+.tile-footer[class*='bg-']:not(.bg-default) .legend table {
+    color: white !important;
+}
+
+.tile[class*='bg-']:not(.bg-default) h1.underline,
+.tile[class*='bg-']:not(.bg-default) h2.underline,
+.tile[class*='bg-']:not(.bg-default) h3.underline,
+.tile[class*='bg-']:not(.bg-default) h4.underline,
+.tile[class*='bg-']:not(.bg-default) h5.underline,
+.tile[class*='bg-']:not(.bg-default) h6.underline,
+.tile[class*='bg-']:not(.bg-default) .h1.underline,
+.tile[class*='bg-']:not(.bg-default) .h2.underline,
+.tile[class*='bg-']:not(.bg-default) .h3.underline,
+.tile[class*='bg-']:not(.bg-default) .h4.underline,
+.tile[class*='bg-']:not(.bg-default) .h5.underline,
+.tile[class*='bg-']:not(.bg-default) .h6.underline,
+.tile-header[class*='bg-']:not(.bg-default) h1.underline,
+.tile-header[class*='bg-']:not(.bg-default) h2.underline,
+.tile-header[class*='bg-']:not(.bg-default) h3.underline,
+.tile-header[class*='bg-']:not(.bg-default) h4.underline,
+.tile-header[class*='bg-']:not(.bg-default) h5.underline,
+.tile-header[class*='bg-']:not(.bg-default) h6.underline,
+.tile-header[class*='bg-']:not(.bg-default) .h1.underline,
+.tile-header[class*='bg-']:not(.bg-default) .h2.underline,
+.tile-header[class*='bg-']:not(.bg-default) .h3.underline,
+.tile-header[class*='bg-']:not(.bg-default) .h4.underline,
+.tile-header[class*='bg-']:not(.bg-default) .h5.underline,
+.tile-header[class*='bg-']:not(.bg-default) .h6.underline,
+.tile-widget[class*='bg-']:not(.bg-default) h1.underline,
+.tile-widget[class*='bg-']:not(.bg-default) h2.underline,
+.tile-widget[class*='bg-']:not(.bg-default) h3.underline,
+.tile-widget[class*='bg-']:not(.bg-default) h4.underline,
+.tile-widget[class*='bg-']:not(.bg-default) h5.underline,
+.tile-widget[class*='bg-']:not(.bg-default) h6.underline,
+.tile-widget[class*='bg-']:not(.bg-default) .h1.underline,
+.tile-widget[class*='bg-']:not(.bg-default) .h2.underline,
+.tile-widget[class*='bg-']:not(.bg-default) .h3.underline,
+.tile-widget[class*='bg-']:not(.bg-default) .h4.underline,
+.tile-widget[class*='bg-']:not(.bg-default) .h5.underline,
+.tile-widget[class*='bg-']:not(.bg-default) .h6.underline,
+.tile-body[class*='bg-']:not(.bg-default) h1.underline,
+.tile-body[class*='bg-']:not(.bg-default) h2.underline,
+.tile-body[class*='bg-']:not(.bg-default) h3.underline,
+.tile-body[class*='bg-']:not(.bg-default) h4.underline,
+.tile-body[class*='bg-']:not(.bg-default) h5.underline,
+.tile-body[class*='bg-']:not(.bg-default) h6.underline,
+.tile-body[class*='bg-']:not(.bg-default) .h1.underline,
+.tile-body[class*='bg-']:not(.bg-default) .h2.underline,
+.tile-body[class*='bg-']:not(.bg-default) .h3.underline,
+.tile-body[class*='bg-']:not(.bg-default) .h4.underline,
+.tile-body[class*='bg-']:not(.bg-default) .h5.underline,
+.tile-body[class*='bg-']:not(.bg-default) .h6.underline,
+.tile-footer[class*='bg-']:not(.bg-default) h1.underline,
+.tile-footer[class*='bg-']:not(.bg-default) h2.underline,
+.tile-footer[class*='bg-']:not(.bg-default) h3.underline,
+.tile-footer[class*='bg-']:not(.bg-default) h4.underline,
+.tile-footer[class*='bg-']:not(.bg-default) h5.underline,
+.tile-footer[class*='bg-']:not(.bg-default) h6.underline,
+.tile-footer[class*='bg-']:not(.bg-default) .h1.underline,
+.tile-footer[class*='bg-']:not(.bg-default) .h2.underline,
+.tile-footer[class*='bg-']:not(.bg-default) .h3.underline,
+.tile-footer[class*='bg-']:not(.bg-default) .h4.underline,
+.tile-footer[class*='bg-']:not(.bg-default) .h5.underline,
+.tile-footer[class*='bg-']:not(.bg-default) .h6.underline {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.tile[class*='bg-']:not(.bg-default) .owl-theme .owl-controls .owl-page span,
+.tile-header[class*='bg-']:not(.bg-default) .owl-theme .owl-controls .owl-page span,
+.tile-widget[class*='bg-']:not(.bg-default) .owl-theme .owl-controls .owl-page span,
+.tile-body[class*='bg-']:not(.bg-default) .owl-theme .owl-controls .owl-page span,
+.tile-footer[class*='bg-']:not(.bg-default) .owl-theme .owl-controls .owl-page span {
+    background: white;
+}
+
+.tile[class*='bg-']:not(.bg-default) .form-control,
+.tile-header[class*='bg-']:not(.bg-default) .form-control,
+.tile-widget[class*='bg-']:not(.bg-default) .form-control,
+.tile-body[class*='bg-']:not(.bg-default) .form-control,
+.tile-footer[class*='bg-']:not(.bg-default) .form-control {
+    border-color: rgba(255, 255, 255, 0.3);
+    background-color: transparent;
+    color: white;
+}
+
+.tile[class*='bg-']:not(.bg-default) .form-control::-webkit-input-placeholder,
+.tile-header[class*='bg-']:not(.bg-default) .form-control::-webkit-input-placeholder,
+.tile-widget[class*='bg-']:not(.bg-default) .form-control::-webkit-input-placeholder,
+.tile-body[class*='bg-']:not(.bg-default) .form-control::-webkit-input-placeholder,
+.tile-footer[class*='bg-']:not(.bg-default) .form-control::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.tile[class*='bg-']:not(.bg-default) .form-control::-moz-placeholder,
+.tile-header[class*='bg-']:not(.bg-default) .form-control::-moz-placeholder,
+.tile-widget[class*='bg-']:not(.bg-default) .form-control::-moz-placeholder,
+.tile-body[class*='bg-']:not(.bg-default) .form-control::-moz-placeholder,
+.tile-footer[class*='bg-']:not(.bg-default) .form-control::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.tile[class*='bg-']:not(.bg-default) .form-control:-moz-placeholder,
+.tile-header[class*='bg-']:not(.bg-default) .form-control:-moz-placeholder,
+.tile-widget[class*='bg-']:not(.bg-default) .form-control:-moz-placeholder,
+.tile-body[class*='bg-']:not(.bg-default) .form-control:-moz-placeholder,
+.tile-footer[class*='bg-']:not(.bg-default) .form-control:-moz-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.tile[class*='bg-']:not(.bg-default) .form-control:-ms-input-placeholder,
+.tile-header[class*='bg-']:not(.bg-default) .form-control:-ms-input-placeholder,
+.tile-widget[class*='bg-']:not(.bg-default) .form-control:-ms-input-placeholder,
+.tile-body[class*='bg-']:not(.bg-default) .form-control:-ms-input-placeholder,
+.tile-footer[class*='bg-']:not(.bg-default) .form-control:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.tile[class*='bg-']:not(.bg-default) .form-control:hover:not(:disabled),
+.tile-header[class*='bg-']:not(.bg-default) .form-control:hover:not(:disabled),
+.tile-widget[class*='bg-']:not(.bg-default) .form-control:hover:not(:disabled),
+.tile-body[class*='bg-']:not(.bg-default) .form-control:hover:not(:disabled),
+.tile-footer[class*='bg-']:not(.bg-default) .form-control:hover:not(:disabled) {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.tile[class*='bg-']:not(.bg-default) .form-control:focus,
+.tile[class*='bg-']:not(.bg-default) .form-control:focus:hover,
+.tile-header[class*='bg-']:not(.bg-default) .form-control:focus,
+.tile-header[class*='bg-']:not(.bg-default) .form-control:focus:hover,
+.tile-widget[class*='bg-']:not(.bg-default) .form-control:focus,
+.tile-widget[class*='bg-']:not(.bg-default) .form-control:focus:hover,
+.tile-body[class*='bg-']:not(.bg-default) .form-control:focus,
+.tile-body[class*='bg-']:not(.bg-default) .form-control:focus:hover,
+.tile-footer[class*='bg-']:not(.bg-default) .form-control:focus,
+.tile-footer[class*='bg-']:not(.bg-default) .form-control:focus:hover {
+    border-color: #22beef;
+}
+
+.tile[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap.open,
+.tile-header[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap.open,
+.tile-widget[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap.open,
+.tile-body[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap.open,
+.tile-footer[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap.open {
+    border-color: #22beef;
+}
+
+.tile[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search::-webkit-input-placeholder,
+.tile-header[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search::-webkit-input-placeholder,
+.tile-widget[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search::-webkit-input-placeholder,
+.tile-body[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search::-webkit-input-placeholder,
+.tile-footer[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.tile[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search::-moz-placeholder,
+.tile-header[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search::-moz-placeholder,
+.tile-widget[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search::-moz-placeholder,
+.tile-body[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search::-moz-placeholder,
+.tile-footer[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.tile[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search:-moz-placeholder,
+.tile-header[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search:-moz-placeholder,
+.tile-widget[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search:-moz-placeholder,
+.tile-body[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search:-moz-placeholder,
+.tile-footer[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search:-moz-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.tile[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search:-ms-input-placeholder,
+.tile-header[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search:-ms-input-placeholder,
+.tile-widget[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search:-ms-input-placeholder,
+.tile-body[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search:-ms-input-placeholder,
+.tile-footer[class*='bg-']:not(.bg-default) .ui-select-multiple.ui-select-bootstrap input.ui-select-search:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media only screen and (max-width: 628px) {
+    .tile .tile-header .controls {
+        display: none;
+    }
+}

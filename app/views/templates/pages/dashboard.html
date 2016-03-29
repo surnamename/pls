@@ -1,0 +1,183 @@
+<div data-ng-slim-scroll id="scroll-page" class="page page-dashboard">
+  <!-- Breadcrumbs -->
+  <div class="pageheader">
+    <div class="page-bar">
+      <ul class="page-breadcrumb">
+        <li>
+          <a ui-sref="app.dashboard"><i class="fa fa-home"></i></a>
+        </li>
+        <li data-ng-repeat="item in breadcrumbs">
+          <a data-ng-if="item.link" data-ng-bind="item.text" ui-sref="item.link"></a>
+
+          <p data-ng-if="!item.link" data-ng-bind="item.text"></p>
+        </li>
+        <li>
+          <p data-ng-bind="page.title" class="active"></p>
+        </li>
+      </ul>
+      <div data-ng-controller="dateRange as dateRange" class="page-toolbar">
+        <a href date-range-picker="dateRange" class="btn">
+          <span data-ng-bind="dateRange.start"></span> - <span data-ng-bind="dateRange.end"></span>
+          <i class="fa fa-angle-down"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div class="row">
+    <!-- First Card -->
+    <div class="card-container col-lg-3 col-sm-6 col-sm-12">
+      <div class="card">
+        <div class="front bg-greensea">
+          <div class="row">
+            <div class="col-xs-4">
+              <i class="fa fa-users fa-4x"></i>
+            </div>
+            <div class="col-xs-8">
+              <p class="text-elg text-strong mb-0">3 659</p>
+              <span>New Customers</span>
+            </div>
+          </div>
+        </div>
+        <div class="back bg-lightred">
+          <div class="row">
+            <div class="col-xs-4">
+              <a href><i class="fa fa-cog fa-2x"></i> Settings</a>
+            </div>
+            <div class="col-xs-4">
+              <a href><i class="fa fa-chain-broken fa-2x"></i> Content</a>
+            </div>
+            <div class="col-xs-4">
+              <a href><i class="fa fa-ellipsis-h fa-2x"></i> More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Second Card -->
+    <div class="card-container col-lg-3 col-sm-6 col-sm-12">
+      <div class="card">
+        <div class="front bg-greensea">
+          <div class="row">
+            <div class="col-xs-4">
+              <i class="fa fa-cart-plus fa-4x"></i>
+            </div>
+            <div class="col-xs-8">
+              <p class="text-elg text-strong mb-0">19 364</p>
+              <span>New Orders</span>
+            </div>
+          </div>
+        </div>
+        <div class="back bg-lightred">
+          <div class="row">
+            <div class="col-xs-4">
+              <a href><i class="fa fa-cog fa-2x"></i> Settings</a>
+            </div>
+            <div class="col-xs-4">
+              <a href><i class="fa fa-chain-broken fa-2x"></i> Content</a>
+            </div>
+            <div class="col-xs-4">
+              <a href><i class="fa fa-ellipsis-h fa-2x"></i> More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Third Card -->
+    <div class="card-container col-lg-3 col-sm-6 col-sm-12">
+      <div class="card">
+        <div class="front bg-greensea">
+          <div class="row">
+            <div class="col-xs-4">
+              <i class="fa fa-usd fa-4x"></i>
+            </div>
+            <div class="col-xs-8">
+              <p class="text-elg text-strong mb-0">973 984</p>
+              <span>Sales</span>
+            </div>
+          </div>
+        </div>
+        <div class="back bg-lightred">
+          <div class="row">
+            <div class="col-xs-4">
+              <a href><i class="fa fa-cog fa-2x"></i> Settings</a>
+            </div>
+            <div class="col-xs-4">
+              <a href><i class="fa fa-chain-broken fa-2x"></i> Content</a>
+            </div>
+            <div class="col-xs-4">
+              <a href><i class="fa fa-ellipsis-h fa-2x"></i> More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fouth Card -->
+    <div class="card-container col-lg-3 col-sm-6 col-sm-12">
+      <div class="card">
+        <div class="front bg-greensea">
+          <div class="row">
+            <div class="col-xs-4">
+              <i class="fa fa-eye fa-4x"></i>
+            </div>
+            <div class="col-xs-8">
+              <p class="text-elg text-strong mb-0">29 651</p>
+              <span>Requests</span>
+            </div>
+          </div>
+        </div>
+        <div class="back bg-lightred">
+          <div class="row">
+            <div class="col-xs-4">
+              <a href><i class="fa fa-cog fa-2x"></i> Settings</a>
+            </div>
+            <div class="col-xs-4">
+              <a href><i class="fa fa-chain-broken fa-2x"></i> Content</a>
+            </div>
+            <div class="col-xs-4">
+              <a href><i class="fa fa-ellipsis-h fa-2x"></i> More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <uib-accordion data-close-others="true" class="spa-accordion tile">
+    <!-- Alerts -->
+    <uib-accordion-group data-is-open="vm.accordion.alerts.status" data-fullscreen="vm.isFS.alerts" only-watched-property class="tile">
+      <div data-grid-panel="alerts" data-scope="vm"></div>
+    </uib-accordion-group>
+
+    <!-- Booked -->
+    <uib-accordion-group data-is-open="vm.accordion.booked.status" data-fullscreen="vm.isFS.booked" only-watched-property class="tile">
+      <div data-grid-panel="booked" data-scope="vm"></div>
+    </uib-accordion-group>
+
+    <!-- Active Shipments -->
+    <uib-accordion-group data-is-open="vm.accordion.undelivered.status" data-fullscreen="vm.isFS.undelivered" only-watched-property class="tile">
+      <div data-grid-panel="undelivered" data-scope="vm"></div>
+    </uib-accordion-group>
+
+    <!-- Waiting For Vendor Bill -->
+    <uib-accordion-group data-is-open="vm.accordion.unbilled.status" data-fullscreen="vm.isFS.unbilled" only-watched-property class="tile">
+      <div data-grid-panel="unbilled" data-scope="vm"></div>
+    </uib-accordion-group>
+
+    <!-- Open Shipments -->
+    <uib-accordion-group data-is-open="vm.accordion.open.status" data-fullscreen="vm.isFS.open" only-watched-property class="tile">
+      <div data-grid-panel="open" data-scope="vm"></div>
+    </uib-accordion-group>
+
+    <!-- All Shipments -->
+    <uib-accordion-group data-is-open="vm.accordion.all.status" data-fullscreen="vm.isFS.all" only-watched-property class="tile">
+      <div data-grid-panel="all" data-scope="vm"></div>
+    </uib-accordion-group>
+
+    <!-- Manual BOL -->
+    <uib-accordion-group data-is-open="vm.accordion.allManualBol.status" data-fullscreen="vm.isFS.allManualBol" only-watched-property class="tile">
+      <div data-grid-panel="allManualBol" data-scope="vm"></div>
+    </uib-accordion-group>
+  </uib-accordion>
+</div>
