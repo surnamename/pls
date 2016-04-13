@@ -85,6 +85,9 @@
     /* App.Dashboard Module */
     addTag('script', {src: 'app/modules/pages/dashboard/controllers/main.js', type: 'text/javascript'}, body);
 
+    /* App.Load Module */
+    addTag('script', {src: 'app/modules/pages/load/controllers/main.js', type: 'text/javascript'}, body);
+
     /* App.ShipmentEntry Module */
     addTag('script', {src: 'app/modules/pages/shipment-entry/controllers/main.js', type: 'text/javascript'}, body);
 

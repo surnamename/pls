@@ -1,0 +1,119 @@
+<div class="well pt-0">
+  <h2 data-ng-bind="address" class="text-capitalize"></h2>
+  <hr class="mt-0 mb-10">
+
+  <div class="form-group">
+    <label for="{{address}}Name" class="col-sm-3 control-label text-strong">Name:</label>
+
+    <div class="col-sm-9">
+      <input id="{{address}}Name" type="text" data-ng-model="model[address].name" placeholder="Enter {{address}} name"
+             class="form-control"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="{{address}}Code" class="col-sm-3 control-label">Code:</label>
+
+    <div class="col-sm-9">
+      <input id="{{address}}Code" type="text" data-ng-model="model[address].code" class="form-control" disabled/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="{{address}}Address1" class="col-sm-3 control-label text-nowrap">Address 1:</label>
+
+    <div class="col-sm-9">
+      <input id="{{address}}Address1" type="text" data-ng-model="model[address].address.first" class="form-control"
+             disabled/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="{{address}}Address2" class="col-sm-3 control-label text-nowrap">Address 2:</label>
+
+    <div class="col-sm-9">
+      <input id="{{address}}Address2" type="text" data-ng-model="model[address].address.second" class="form-control"
+             disabled/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="{{address}}Zip" class="col-sm-3 control-label text-nowrap pl-0">City, State, Zip:</label>
+
+    <div class="col-sm-9">
+      <input id="{{address}}Zip" type="text" data-ng-model="model[address].zip" class="form-control" disabled/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="{{address}}Country" class="col-sm-3 control-label">Country:</label>
+
+    <div class="col-sm-9">
+      <input id="{{address}}Country" type="text" data-ng-model="model[address].country" class="form-control" disabled/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="{{address}}Contact" class="col-sm-3 control-label text-nowrap pl-0">Contact Name:</label>
+
+    <div class="col-sm-9">
+      <input id="{{address}}Contact" type="text" data-ng-model="model[address].contact" class="form-control" disabled/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="{{address}}Phone" class="col-sm-3 control-label">Phone:</label>
+
+    <div class="col-sm-9">
+      <input id="{{address}}Phone" type="text" data-ng-model="model[address].phone" class="form-control" disabled/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="{{address}}Fax" class="col-sm-3 control-label">Fax:</label>
+
+    <div class="col-sm-9">
+      <input id="{{address}}Fax" type="text" data-ng-model="model[address].fax" class="form-control" disabled/>
+    </div>
+  </div>
+
+  <div data-ng-if="address === 'origin'">
+    <div class="form-group">
+      <label class="col-sm-3 control-label text-nowrap pl-0">Shipping hours</label>
+
+      <label for="{{address}}ShippingFrom" class="col-sm-2 control-label">From:</label>
+
+      <div class="col-sm-3">
+        <input id="{{address}}ShippingFrom" type="text" data-ng-model="model.origin.shippingHours.from"
+               class="form-control" disabled/>
+      </div>
+
+      <label for="{{address}}ShippingTo" class="col-sm-1 control-label pl-0">To:</label>
+
+      <div class="col-sm-3">
+        <input id="{{address}}ShippingTo" type="text" data-ng-model="model.origin.shippingHours.to"
+               class="form-control" disabled/>
+      </div>
+    </div>
+  </div>
+
+  <div data-ng-if="address === 'destination'">
+    <div class="form-group">
+      <label class="col-sm-3 control-label text-nowrap pl-0">Receiving hours</label>
+
+      <label for="{{address}}ReceivingFrom" class="col-sm-2 control-label">From:</label>
+
+      <div class="col-sm-3">
+        <input id="{{address}}ReceivingFrom" type="text" data-ng-model="model.origin.receivingHours.from"
+               class="form-control" disabled/>
+      </div>
+
+      <label for="{{address}}ReceivingTo" class="col-sm-1 control-label pl-0">To:</label>
+
+      <div class="col-sm-3">
+        <input id="{{address}}ReceivingTo" type="text" data-ng-model="model.origin.receivingHours.to"
+               class="form-control" disabled/>
+      </div>
+    </div>
+  </div>
+</div>

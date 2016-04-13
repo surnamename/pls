@@ -1,0 +1,70 @@
+<div ng-slim-scroll id="scroll-content" class="page pls-page-name">
+  <div data-fullscreen="vm.isFS01" class="tile panel panel-default panel-open" style="height: auto">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <div class="tile-header p-0" style="border-bottom: 1px solid #ddd">
+          <!-- Breadcrumbs -->
+          <div class="pageheader m-0">
+            <div class="page-bar">
+              <ul class="page-breadcrumb">
+                <li>
+                  <a ui-sref="app.dashboard"><i class="fa fa-home"></i></a>
+                </li>
+                <li data-ng-repeat="item in breadcrumbs">
+                  <a data-ng-if="item.link" ui-sref="item.link" data-ng-bind="item.text"></a>
+
+                  <p data-ng-if="!item.link" data-ng-bind="item.text"></p>
+                </li>
+                <li>
+                  <p data-ng-bind="page.title" class="active"></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <ul class="controls">
+            <li>
+              <a data-ng-click="vm.isFS01 = !vm.isFS01" data-app-full-screen-grid="alerts">
+                <i class="fa fa-arrows-alt" style="cursor: pointer"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-collapse in collapse">
+      <div class="panel-body">
+        <div class="tile-body">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="customerInput" class="col-sm-1 control-label text-strong">Customer:</label>
+
+              <div class="col-sm-3">
+                <input id="customerInput" type="text" data-ng-model="model.customer" placeholder="Enter customer name"
+                       class="form-control"/>
+              </div>
+
+              <div class="col-sm-8">
+                <div role="group" class="btn-group btn-group-justified">
+                  <a data-ui-sref="app.load.shipmentEntry" role="button" data-ui-sref-active="active"
+                     class="btn btn-default">Shipment Entry</a>
+                  <a data-ui-sref="app.load.manualBOL" role="button" data-ui-sref-active="active"
+                     class="btn btn-default">Manual
+                    BOL</a>
+                  <a data-ui-sref="app.load.quotes" role="button" data-ui-sref-active="active" class="btn btn-default">Quotes</a>
+                  <a data-ui-sref="app.load.salesOrder" role="button" data-ui-sref-active="active"
+                     class="btn btn-default">Sales
+                    Order</a>
+                </div>
+              </div>
+            </div>
+
+            <div data-app-load-address="origin" class="col-sm-4"></div>
+            <div data-app-load-address="destination" class="col-sm-4"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

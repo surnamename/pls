@@ -77,6 +77,25 @@ angular.module('app').config(['$stateProvider', '$urlRouterProvider',
           templateUrl: 'app/views/templates/components/app.html'
         })
 
+        /* Load */
+      .state('app.load', {
+        url: '/load',
+        templateUrl: 'app/views/templates/pages/load.html',
+        controller: 'app.load.controller.main as vm'
+      })
+      .state('app.load.shipmentEntry', {
+        url: '/shipment-entry'
+      })
+      .state('app.load.manualBOL', {
+        url: '/manual-bol'
+      })
+      .state('app.load.quotes', {
+        url: '/quotes'
+      })
+      .state('app.load.salesOrder', {
+        url: '/sales-order'
+      })
+
       /* shipment-entry */
         .state('app.shipmentEntry', {
           url: '/shipment-entry',
@@ -97,12 +116,14 @@ angular.module('app').config(['$stateProvider', '$urlRouterProvider',
           url: '/quotes',
           template: '<div ui-view></div>',
           controller: 'app.quotes.controller.main'
-        })/* quotes/new */
+        })
+        /* quotes/new */
         .state('app.quotes.new', {
           url: '/new',
           templateUrl: 'app/views/templates/pages/empty.html',
           controller: 'app.quotes.controller.new as vm'
-        })/* quotes/saved */
+        })
+        /* quotes/saved */
         .state('app.quotes.saved', {
           url: '/saved',
           templateUrl: 'app/views/templates/pages/empty.html',
